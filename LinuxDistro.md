@@ -1,10 +1,13 @@
 # Linux Distro Ideas
 
-Ideas for a lightweight linux distro with a lot of rust and a focus on performance, security, and ease of use.
+Ideas for a lightweight linux distro with a lot of rust and a focus on performance, security, beauty, and ease of use.
 
 **Release**: Rolling with optimized packages similiar to CachyOS
+
 **Package Manager**: [Redox's pkg](https://github.com/redox-os/pkgutils)
+
 **Immutable**: Maybe
+
 **Installer**: [Pop!_OS Installer](https://github.com/pop-os/installer?tab=readme-ov-file)
 
 ### Features
