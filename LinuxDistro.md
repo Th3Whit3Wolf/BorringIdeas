@@ -24,6 +24,7 @@ Ideas for a lightweight linux distro with a lot of rust and a focus on performan
   - [QtGreet](https://gitlab.com/marcusbritanicus/QtGreet)
   - [Cosmic Greeter](https://github.com/pop-os/cosmic-greeter)
 - Come default with firewall rules and update with package installs
+- Offer [stratis](https://github.com/stratis-storage/stratisd)
 - Special install options for developers
   - Install groups of packages based on programming language
     - Maybe have a special group for web
@@ -50,10 +51,11 @@ I really like Redox's `pkg` but I also like AerynOS's [moss](https://github.com/
 
 ### Pid 1
 
-systemd or [s6](https://skarnet.org/software/s6/).
+systemd, [s6](https://skarnet.org/software/s6/), [Open Euler's sysmaster](https://gitee.com/openeuler/sysmaster/blob/master/docs/en/sysmaster_usage.md).
 - Systemd would be a lot easier for a lot of reasons
 - S6 would be lighter
   - Would be fun (I think) to make something like [66](https://web.obarun.org/software/66/0.8.2.1/index/) in rust
+- Sysmaster feels on brand for the goals of this project
 
 ### Shells
 
@@ -80,6 +82,7 @@ systemd or [s6](https://skarnet.org/software/s6/).
 - [lfs](https://github.com/Canop/lfs): A Linux utility to get information on filesystems; like `df` but better 
 - [hck](https://github.com/sstadick/hck): `cut` with decompression, column reordering and regex as delimiter
 - [navi](https://github.com/denisidoro/navi):  An interactive cheatsheet tool for the command-line 
+- [ntpd-rs](https://github.com/pendulum-project/ntpd-rs): A full-featured implementation of the Network Time Protocol, including NTS support. 
 - [procs](https://github.com/dalance/procs): A modern replacement for `ps` written in Rust
 - [rage](https://github.com/str4d/rage):  A simple, secure and modern file encryption tool (and Rust library) with small explicit keys, no config options, and UNIX-style composability. 
 - [rargs](https://github.com/lotabout/rargs):  xargs + awk with pattern matching support. `ls *.bak | rargs -p '(.*)\.bak' mv {0} {1}` 
@@ -90,6 +93,7 @@ systemd or [s6](https://skarnet.org/software/s6/).
 - [rnr](https://github.com/ismaelgv/rnr): "A command-line tool to batch rename files and directories"
 - [sad](https://github.com/ms-jpq/sad):  CLI search and replace | Space Age seD 
 - [skim](https://github.com/lotabout/skim): A command-line fuzzy finder.
+- [sudo-rs](https://github.com/trifectatechfoundation/sudo-rs):  A memory safe implementation of sudo and su. 
 - [systeriod](https://github.com/orhun/systeroid):  A more powerful alternative to sysctl(8) with a terminal user interface 🐧 
 - [tealdear](https://github.com/dbrgn/tealdeer): A very fast implementation of `tldr` in Rust. 
 - [tokei](https://github.com/XAMPPRocky/tokei): Count your (lines of) code, quickly
@@ -120,6 +124,7 @@ systemd or [s6](https://skarnet.org/software/s6/).
 - [rutabaga_gfx](https://github.com/magma-gpu/rutabaga_gfx):  Cross-platform, open-source, Rust-based GPU paravirtualization 
 - [selene](https://github.com/Kampfkarren/selene):  A blazing-fast modern Lua linter written in Rust 
 - [step](https://github.com/smallstep/cli):  🧰 A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc. 
+- [system76 power](https://github.com/pop-os/system76-power): A sophisticated power management daemon. It’s better than TLP for modern laptops.
 - [uv](https://github.com/astral-sh/uv):  An extremely fast Python package and project manager, written in Rust. 
 - [watchexec](https://github.com/watchexec/watchexec): Execute commands in response to file modifications.
 - [wild](https://github.com/davidlattimore/wild):  A very fast linker for Linux 
@@ -195,7 +200,19 @@ systemd or [s6](https://skarnet.org/software/s6/).
   - [hyprtasking](https://github.com/raybbian/hyprtasking)
 
 
+## Potential For Fun & Hardwork
+
+### Initramfs Generator
+
+Create an intramfs generator starting from [microhop](https://github.com/tinythings/microhop) (use [3cpio](https://github.com/bdrung/3cpio) to operate on a manifest without needing to copy files into a temporary directory beforehand.) and port necessary sections of [booster](https://github.com/anatol/booster)
+
+### Package Manager
+
+Make a package manager that uses pkgar from [Redox OS's pkgutils](https://github.com/redox-os/pkgutils) and [AerynOS's moss](https://github.com/AerynOS/os-tools). Also maybe combine that with [AWS's tough](https://github.com/awslabs/tough?tab=readme-ov-file) to incorporate [The Update Framework](https://theupdateframework.io/).
+
+
 ## Notable Rust in Linux
 
 - [PopOS](https://github.com/pop-os)
 - [AerynOS](https://github.com/AerynOS)
+- [CachyOS](https://github.com/cachyos)
