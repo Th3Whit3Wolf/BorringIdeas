@@ -91,7 +91,9 @@ systemd, [s6](https://skarnet.org/software/s6/), [Open Euler's sysmaster](https:
 - [ripgrep](https://github.com/BurntSushi/ripgrep): A faster replacement for GNU’s `grep` command. This tool is very good.
 - [ripgrep-all](https://github.com/phiresky/ripgrep-all) to search PDFs, E-Books, Office documents, zip, tar.gz, etc.
 - [rnr](https://github.com/ismaelgv/rnr): "A command-line tool to batch rename files and directories"
-- [sad](https://github.com/ms-jpq/sad):  CLI search and replace | Space Age seD 
+- [sad](https://github.com/ms-jpq/sad):  CLI search and replace | Space Age seD
+- [sequoia gpg](https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg): This is a re-implementation and drop-in replacement of gpg and
+gpgv using the Sequoia OpenPGP implementation.
 - [skim](https://github.com/lotabout/skim): A command-line fuzzy finder.
 - [sudo-rs](https://github.com/trifectatechfoundation/sudo-rs):  A memory safe implementation of sudo and su. 
 - [systeriod](https://github.com/orhun/systeroid):  A more powerful alternative to sysctl(8) with a terminal user interface 🐧 
